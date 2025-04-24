@@ -17,7 +17,7 @@ public class ModBiomes {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(CoastalRealms.MOD_ID, name));
     }
 
-    public static void bootstrap(Registry<Biome> registry) {
+    public static void bootstrap() {
         register(registry, FLAT_BEACH, makeFlatBeach());
         register(registry, SHALLOW_SHORE, makeShallowShore());
         register(registry, REEF_OCEAN, makeReefOcean());
