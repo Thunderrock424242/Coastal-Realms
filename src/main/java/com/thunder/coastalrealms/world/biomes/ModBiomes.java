@@ -1,11 +1,11 @@
 package com.thunder.coastalrealms.world.biomes;
 
-import com.thunder.coastalrealms.CoastalRealms;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
+
+import static com.thunder.coastalrealms.CoastalRealms.MOD_ID;
 
 public class ModBiomes {
     public static ResourceKey<Biome> FLAT_BEACH = register("flat_beach");
@@ -14,17 +14,10 @@ public class ModBiomes {
     public static ResourceKey<Biome> DEEP_OCEAN_SHELF = register("deep_ocean_shelf");
 
     private static ResourceKey<Biome> register(String name) {
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(CoastalRealms.MOD_ID, name));
+        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(MOD_ID, name));
     }
 
     public static void bootstrap() {
-        register(registry, FLAT_BEACH, makeFlatBeach());
-        register(registry, SHALLOW_SHORE, makeShallowShore());
-        register(registry, REEF_OCEAN, makeReefOcean());
-        register(registry, DEEP_OCEAN_SHELF, makeDeepOceanShelf());
-    }
-
-    private static void register(Registry<Biome> registry, ResourceKey<Biome> key, Biome biome) {
-        Registry.register(registry, key.location(), biome);
+        // Called during mod loading, actual biome registration done via JSON or Datagen
     }
 }
