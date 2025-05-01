@@ -10,5 +10,7 @@
   },
   "spawn_costs": {},
   "spawners": {},
-  "features": []
+  "features": [
+    "coastalrealms:rock_boulder"
+  ]
 }

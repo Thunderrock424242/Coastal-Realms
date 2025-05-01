@@ -39,5 +39,8 @@
       }
     ]
   },
-  "features": []
+  "features": [
+    "coastalrealms:coral_patch",
+    "coastalrealms:kelp_forest"
+  ]
 }
