@@ -12,15 +12,7 @@ import static com.thunder.coastalrealms.CoastalRealms.MOD_ID;
 
 public class CoastalTerrainProvider extends Region {
     public CoastalTerrainProvider() {
-        super(new ResourceLocation(MOD_ID, "coastal_region"), RegionType.OVERWORLD, 3);
-    }
-
-    @Override
-    public void addBiomes(BiomeSelectionContext selectionContext, BiomeRegistry biomeRegistry) {
-        selectionContext.addBiome(ModBiomes.FLAT_BEACH, getWeightForCoastBand(0));
-        selectionContext.addBiome(ModBiomes.SHALLOW_SHORE, getWeightForCoastBand(1));
-        selectionContext.addBiome(ModBiomes.REEF_OCEAN, getWeightForCoastBand(2));
-        selectionContext.addBiome(ModBiomes.DEEP_OCEAN_SHELF, getWeightForCoastBand(3));
+        super(ResourceLocation.tryParse(MOD_ID + ":coastal_region"), RegionType.OVERWORLD, 3);
     }
 
     @Override
@@ -40,15 +32,5 @@ public class CoastalTerrainProvider extends Region {
         } else {
             return ModBiomes.FLAT_BEACH;
         }
-    }
-
-    private int getWeightForCoastBand(int band) {
-        return switch (band) {
-            case 0 -> 8;
-            case 1 -> 6;
-            case 2 -> 5;
-            case 3 -> 2;
-            default -> 1;
-        };
     }
 }

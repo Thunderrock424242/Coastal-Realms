@@ -1,6 +1,7 @@
 package com.thunder.coastalrealms;
 
 import com.thunder.coastalrealms.world.biomes.ModBiomes;
+import com.thunder.coastalrealms.world.biomes.TerraBlenderBiomeProvider;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -54,7 +55,6 @@ public class CoastalRealms {
         modEventBus.addListener(this::onServerStopping);
 
         // Register global events
-        ModBiomes.bootstrap();
         TerraBlenderBiomeProvider.init();
 
     }

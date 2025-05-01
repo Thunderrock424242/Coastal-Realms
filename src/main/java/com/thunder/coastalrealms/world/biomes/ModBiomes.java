@@ -1,23 +1,24 @@
 package com.thunder.coastalrealms.world.biomes;
 
-import net.minecraft.core.Registry;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import static com.thunder.coastalrealms.CoastalRealms.MOD_ID;
 
 public class ModBiomes {
-    public static ResourceKey<Biome> FLAT_BEACH = register("flat_beach");
-    public static ResourceKey<Biome> SHALLOW_SHORE = register("shallow_shore");
-    public static ResourceKey<Biome> REEF_OCEAN = register("reef_ocean");
-    public static ResourceKey<Biome> DEEP_OCEAN_SHELF = register("deep_ocean_shelf");
+    public static final ResourceKey<Biome> FLAT_BEACH = register("flat_beach");
+    public static final ResourceKey<Biome> SHALLOW_SHORE = register("shallow_shore");
+    public static final ResourceKey<Biome> REEF_OCEAN = register("reef_ocean");
+    public static final ResourceKey<Biome> DEEP_OCEAN_SHELF = register("deep_ocean_shelf");
 
     private static ResourceKey<Biome> register(String name) {
-        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(MOD_ID, name));
-    }
-
-    public static void bootstrap() {
-        // Called during mod loading, actual biome registration done via JSON or Datagen
+        return ResourceKey.create(Registries.BIOME, ResourceLocation.tryParse(MOD_ID + ":" + name));
     }
 }
