@@ -15,7 +15,6 @@ public class CoastalTerrainProvider extends Region {
         super(ResourceLocation.tryParse(MOD_ID + ":coastal_region"), RegionType.OVERWORLD, 3);
     }
 
-    @Override
     public ResourceKey<Biome> getBiome(BiomeManager.NoiseBiomeSource noiseSource, int x, int y, int z,
                                        Climate.Parameter temperature, Climate.Parameter humidity, Climate.Parameter continentalness,
                                        Climate.Parameter erosion, Climate.Parameter depth, Climate.Parameter weirdness, float offset) {

@@ -1,15 +1,17 @@
 {
+  "precipitation": "rain",
   "temperature": 1.2,
   "downfall": 0.0,
-  "precipitation": "rain",
   "effects": {
-    "water_color": 4607193,
+    "sky_color": 11881151,
     "water_fog_color": 338313,
     "fog_color": 12638463,
-    "sky_color": 11881151
+    "water_color": 4607193
   },
-  "spawn_costs": {},
+  "carvers": {},
   "spawners": {},
+  "spawn_costs": {},
+  "has_precipitation": true,
   "features": [
     "coastalrealms:rock_boulder"
   ]

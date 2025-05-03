@@ -1,14 +1,14 @@
 {
+  "precipitation": "rain",
   "temperature": 1.0,
   "downfall": 0.4,
-  "precipitation": "rain",
   "effects": {
-    "water_color": 2466891,
+    "sky_color": 8978175,
     "water_fog_color": 84207,
     "fog_color": 7396080,
-    "sky_color": 8978175
+    "water_color": 2466891
   },
-  "spawn_costs": {},
+  "carvers": {},
   "spawners": {
     "water_creature": [
       {
@@ -39,6 +39,8 @@
       }
     ]
   },
+  "spawn_costs": {},
+  "has_precipitation": true,
   "features": [
     "coastalrealms:coral_patch",
     "coastalrealms:kelp_forest"

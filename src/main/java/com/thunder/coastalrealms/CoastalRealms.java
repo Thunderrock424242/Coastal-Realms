@@ -1,7 +1,6 @@
 package com.thunder.coastalrealms;
 
-import com.thunder.coastalrealms.world.biomes.ModBiomes;
-import com.thunder.coastalrealms.world.biomes.TerraBlenderBiomeProvider;
+import com.thunder.coastalrealms.world.biomes.CoastalTerrainProvider;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
@@ -17,6 +16,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import terrablender.api.Regions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,14 +52,15 @@ public class CoastalRealms {
         // Register mod setup and creative tabs
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
-        modEventBus.addListener(this::onServerStopping);
 
         // Register global events
-        TerraBlenderBiomeProvider.init();
 
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            Regions.register(new CoastalTerrainProvider()); // this removes the class TerraBlenderBiomeProvider as its not needed anymore.
+        });
 
     }
 
