@@ -1,5 +1,7 @@
 package com.thunder.coastalrealms;
 
+import com.thunder.coastalrealms.item.ModItems;
+import com.thunder.coastalrealms.registry.ModBlocks;
 import com.thunder.coastalrealms.world.biomes.CoastalTerrainProvider;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -54,6 +56,9 @@ public class CoastalRealms {
         modEventBus.addListener(this::addCreative);
 
         // Register global events
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
 
     }
 

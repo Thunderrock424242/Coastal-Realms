@@ -42,7 +42,7 @@
   "spawn_costs": {},
   "has_precipitation": true,
   "features": [
-    "coastalrealms:coral_patch",
-    "coastalrealms:kelp_forest"
+    { "feature": "coastalrealms:coral_patch" },
+    { "feature": "coastalrealms:kelp_forest" }
   ]
 }

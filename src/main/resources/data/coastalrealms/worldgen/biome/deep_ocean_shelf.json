@@ -13,6 +13,6 @@
   "spawn_costs": {},
   "has_precipitation": true,
   "features": [
-    "coastalrealms:kelp_forest"
+    { "feature": "coastalrealms:kelp_forest" }
   ]
 }
