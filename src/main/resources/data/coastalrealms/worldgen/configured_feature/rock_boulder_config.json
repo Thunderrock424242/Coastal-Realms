@@ -4,7 +4,7 @@
     "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "coastalrealms:boulder_block"
+        "Name": "coastalrealms:rock_boulder_block"
       }
     }
   }
