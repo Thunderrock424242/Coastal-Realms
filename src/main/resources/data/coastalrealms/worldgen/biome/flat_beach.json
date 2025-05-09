@@ -13,6 +13,8 @@
   "spawn_costs": {},
   "has_precipitation": true,
   "features": [
-    { "feature": "coastalrealms:rock_boulder" }
+      [
+    "coastalrealms:rock_boulder"
+        ]
   ]
 }
