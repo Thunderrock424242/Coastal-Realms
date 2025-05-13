@@ -19,15 +19,27 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(CoastalRealms.MOD_ID);
 
-    public static final DeferredBlock<Block> ROCK_BLOCK = registerBlock("rock_block",
+    public static final DeferredBlock<Block> SMALL_ROCK = registerBlock("small rock",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2.0F, 4.0F)
                     .mapColor(MapColor.STONE)
                     .sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BOULDER_BLOCK = registerBlock("boulder_block",
+    public static final DeferredBlock<Block> ROCK = registerBlock("rock",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4.0F, 8.0F)
+                    .mapColor(MapColor.STONE)
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> BIG_ROCK = registerBlock("big rock",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0F, 10.0F)
+                    .mapColor(MapColor.STONE)
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> BIG_BIG_ROCK = registerBlock("big big rock",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(15.0F, 20.0F)
                     .mapColor(MapColor.STONE)
                     .sound(SoundType.STONE)));
 
