@@ -14,7 +14,7 @@
   "has_precipitation": true,
   "features": [
     [
-    "coastalrealms:rock_boulder"
+    "coastalrealms:boulder_block"
       ]
   ]
 }
